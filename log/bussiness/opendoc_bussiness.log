@@ -1,0 +1,5 @@
+2019-03-12 00:33:54.128 - INFO  [nio-8080-exec-1] c.c.s.c.SysUserController      : getBussinessLogger===日志测试
+2019-03-12 00:34:27.899 - INFO  [nio-8080-exec-1] c.c.s.c.SysUserController      : getBussinessLogger===日志测试
+2019-03-12 00:35:20.870 - INFO  [nio-8080-exec-2] c.c.s.c.SysUserController      : getBussinessLogger===日志测试
+2019-03-12 00:35:34.975 - INFO  [nio-8080-exec-3] c.c.s.c.SysUserController      : getBussinessLogger===日志测试
+2019-03-12 00:35:47.670 - INFO  [nio-8080-exec-1] c.c.s.c.SysUserController      : getBussinessLogger===日志测试
