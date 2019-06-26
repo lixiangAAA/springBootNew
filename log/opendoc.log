@@ -1,19 +1,14 @@
-2019-06-11 16:18:36.518 - INFO  [           main] o.s.b.StartupInfoLogger        : Starting SpringbootApplication on Andy with PID 15060 (D:\ideaWorkSpace\target\classes started by Administrator in D:\ideaWorkSpace)
-2019-06-11 16:18:36.539 - INFO  [           main] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
-2019-06-11 16:18:38.304 - INFO  [           main] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8080 (http)
-2019-06-11 16:18:38.321 - INFO  [           main] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8080"]
-2019-06-11 16:18:38.334 - INFO  [           main] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
-2019-06-11 16:18:38.335 - INFO  [           main] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
-2019-06-11 16:18:38.344 - INFO  [           main] o.a.j.l.DirectJDKLog           : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [E:\JAVA\JDK8_64\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\Xshell\;C:\Program Files (x86)\Common Files\NetSarang;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;E:\JAVA\JDK8_64\bin;E:\JAVA\JDK8_64\jre;D:\Git\cmd;C:\Program Files (x86)\MySQL\MySQL Utilities 1.6\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;.]
-2019-06-11 16:18:38.492 - INFO  [           main] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
-2019-06-11 16:18:38.492 - INFO  [           main] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1896 ms
-2019-06-11 16:18:39.107 - INFO  [           main] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
-2019-06-11 16:18:39.377 - INFO  [           main] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8080"]
-2019-06-11 16:18:39.412 - INFO  [           main] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8080 (http) with context path ''
-2019-06-11 16:18:39.416 - INFO  [           main] o.s.b.StartupInfoLogger        : Started SpringbootApplication in 3.334 seconds (JVM running for 4.577)
-2019-06-11 16:18:51.095 - INFO  [nio-8080-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-06-11 16:18:51.095 - INFO  [nio-8080-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
-2019-06-11 16:18:51.102 - INFO  [nio-8080-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 7 ms
-2019-06-11 16:18:57.651 - INFO  [nio-8080-exec-1] c.z.h.HikariDataSource         : HikariPool-1 - Starting...
-2019-06-11 16:18:57.654 - WARN  [nio-8080-exec-1] c.z.h.u.DriverDataSource       : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2019-06-11 16:18:57.799 - INFO  [nio-8080-exec-1] c.z.h.HikariDataSource         : HikariPool-1 - Start completed.
+2019-06-26 12:52:33.528 - INFO  [           main] o.s.b.StartupInfoLogger        : Starting SpringbootApplication on Andy with PID 9524 (D:\myWorkSpace\SpringBoot\target\classes started by Administrator in D:\myWorkSpace\SpringBoot)
+2019-06-26 12:52:33.555 - INFO  [           main] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2019-06-26 12:52:35.190 - INFO  [           main] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8080 (http)
+2019-06-26 12:52:35.204 - INFO  [           main] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8080"]
+2019-06-26 12:52:35.216 - INFO  [           main] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2019-06-26 12:52:35.217 - INFO  [           main] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-06-26 12:52:35.224 - INFO  [           main] o.a.j.l.DirectJDKLog           : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [E:\JAVA\JDK8_64\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\Xshell\;C:\Program Files (x86)\Common Files\NetSarang;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;E:\JAVA\JDK8_64\bin;E:\JAVA\JDK8_64\jre;C:\Program Files (x86)\MySQL\MySQL Utilities 1.6\;D:\apache-maven-3.6.0\bin;D:\Git\cmd;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;.]
+2019-06-26 12:52:35.407 - INFO  [           main] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2019-06-26 12:52:35.408 - INFO  [           main] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1805 ms
+2019-06-26 12:52:36.054 - INFO  [           main] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-26 12:52:36.215 - INFO  [           main] .w.s.WelcomePageHandlerMapping : Adding welcome page template: index
+2019-06-26 12:52:36.374 - INFO  [           main] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8080"]
+2019-06-26 12:52:36.406 - INFO  [           main] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8080 (http) with context path ''
+2019-06-26 12:52:36.410 - INFO  [           main] o.s.b.StartupInfoLogger        : Started SpringbootApplication in 3.201 seconds (JVM running for 4.38)

@@ -59,6 +59,13 @@
             <version>1.2.12</version>
         </dependency>
 
+        <!--静态资源访问-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <version>2.0.4.RELEASE</version>
+        </dependency>
+
 
         <!-- 配置 log4j2 -->
         <dependency>
