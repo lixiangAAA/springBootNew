@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>用户登录</title>
+<!--
+    <script src="/static/js/vue.js"></script>
+-->
+    <link rel='stylesheet' href='http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="/static/css/login.css" />
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+
+
+    <script>
+        /**用户登录**/
+        $(function () {
+            $(".btn-block").click(function () {
+                var username = $(" input[ name='username' ] ").val();
+                var password = $(" input[ name='password' ] ").val();
+                var req = {
+                    userId: 1,
+                    userName: username,
+                    password: password
+                };
+
+                $.ajax({
+                    type:'POST',
+                    dataType:'json',
+                    url:'/sysUser/findByPrimaryKey',
+                    processData:false,
+                    contentType: 'application/json',
+                    data: JSON.stringify(req),
+                    success:function (res) {
+                        alert("用户名：" + res.userName+"密码："+res.password);
+                    }
+                })
+            });
+        })
+
+    </script>
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form-signin">
+            <h2 class="form-signin-heading">欢迎</h2>
+            <input type="text" class="form-control" name="username" placeholder="请输入用户名" />
+            <input type="password" class="form-control" name="password" placeholder="请输入密码" />
+            <label class="checkbox">
+                <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> 记住密码
+            </label>
+            <button class="btn btn-lg btn-primary btn-block">登 录</button>
+        </div>
+    </div>
+
+
+     
+</body>
+</html>
