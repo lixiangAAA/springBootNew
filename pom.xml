@@ -59,6 +59,12 @@
             <version>1.2.12</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.40</version>
+        </dependency>
+
         <!--静态资源访问-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -66,6 +72,13 @@
             <version>2.0.4.RELEASE</version>
         </dependency>
 
+<!--
+        <dependency>
+            <groupId>net.sourceforge.nekohtml</groupId>
+            <artifactId>nekohtml</artifactId>
+            <version>1.9.22</version>
+        </dependency>
+-->
 
         <!-- 配置 log4j2 -->
         <dependency>
@@ -120,6 +133,14 @@
 
 
         </plugins>
+
+<!--
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+-->
     </build>
 
 </project>

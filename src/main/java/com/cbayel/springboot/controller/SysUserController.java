@@ -1,20 +1,21 @@
 package com.cbayel.springboot.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.cbayel.springboot.pojo.SysUser;
 import com.cbayel.springboot.service.SysUserService;
 import com.cbayel.springboot.util.LogUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.slf4j.Logger;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-@Controller
+
+@RestController
 @RequestMapping(value = "/sysUser")
 public class SysUserController {
 
@@ -23,23 +24,23 @@ public class SysUserController {
     Logger log = LogUtils.getExceptionLogger();
     Logger log1 = LogUtils.getBussinessLogger();
     Logger log2 = LogUtils.getDBLogger();
-    @ResponseBody
-    @RequestMapping(value = "/add", produces = {"application/json;charset=UTF-8"})
+
+    @RequestMapping(value = "/add")
     public int addUser(SysUser user){
         return userService.insert(user);
     }
 
-    @ResponseBody
-    @RequestMapping(value = "/findByPrimaryKey", produces = {"application/json;charset=UTF-8"})
-    public SysUser findByPrimaryKey(SysUser user){
+    @RequestMapping(value = "/findByPrimaryKey",method = RequestMethod.POST)
+    public SysUser findByPrimaryKey(@RequestBody JSONObject data){
         SysUser object = new SysUser();
-        object = userService.selectByPrimaryKey(user.getUserId());
+        SysUser sysUser = JSON.toJavaObject(data, SysUser.class);
+        object = userService.selectByPrimaryKey(sysUser.getUserId());
         return object;
 
     }
 
-    @ResponseBody
-    @RequestMapping(value = "/findAll/{pageNum}/{pageSize}", produces = {"application/json;charset=UTF-8"})
+//    @ResponseBody
+    @RequestMapping(value = "/findAll/{pageNum}/{pageSize}")
     public List<SysUser> findAll(@PathVariable("pageNum") int pageNum, @PathVariable("pageSize") int pageSize){
         List<SysUser> userList = new ArrayList<SysUser>();
         userList = userService.findAllUser(pageNum,pageSize);
