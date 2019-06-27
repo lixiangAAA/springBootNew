@@ -12,7 +12,9 @@ import org.slf4j.Logger;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 @RestController
@@ -31,15 +33,14 @@ public class SysUserController {
     }
 
     @RequestMapping(value = "/findByPrimaryKey",method = RequestMethod.POST)
-    public SysUser findByPrimaryKey(@RequestBody JSONObject data){
+    public SysUser findByPrimaryKey(@RequestBody SysUser data){
         SysUser object = new SysUser();
-        SysUser sysUser = JSON.toJavaObject(data, SysUser.class);
-        object = userService.selectByPrimaryKey(sysUser.getUserId());
-        return object;
+        //SysUser sysUser = JSON.toJavaObject(data, SysUser.class);
+        //object = userService.selectByPrimaryKey(Integerdata.get("userId").getClass());
+        return data;
 
     }
 
-//    @ResponseBody
     @RequestMapping(value = "/findAll/{pageNum}/{pageSize}")
     public List<SysUser> findAll(@PathVariable("pageNum") int pageNum, @PathVariable("pageSize") int pageSize){
         List<SysUser> userList = new ArrayList<SysUser>();
