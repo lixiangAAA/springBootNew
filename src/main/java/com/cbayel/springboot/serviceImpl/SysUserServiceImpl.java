@@ -11,8 +11,12 @@ import java.util.List;
 
 @Service(value = "userService")
 public class SysUserServiceImpl implements SysUserService {
+    private final SysUserMapper userMapper;
+
     @Autowired
-    private SysUserMapper userMapper;//这里会报错，但是并不会影响
+    public SysUserServiceImpl(SysUserMapper userMapper) {
+        this.userMapper = userMapper;
+    }
 
     @Override
     public int deleteByPrimaryKey(Integer userId) {

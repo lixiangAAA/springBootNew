@@ -1,31 +1,26 @@
 package com.cbayel.springboot.controller;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.cbayel.springboot.pojo.SysUser;
 import com.cbayel.springboot.service.SysUserService;
-import com.cbayel.springboot.util.LogUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import org.slf4j.Logger;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 
 @RestController
 @RequestMapping(value = "/sysUser")
 public class SysUserController {
 
+    private final SysUserService userService;
+    //Logger log = LogUtils.getExceptionLogger();
+    //Logger log1 = LogUtils.getBussinessLogger();
+    //Logger log2 = LogUtils.getDBLogger();
+
     @Autowired
-    private SysUserService userService;
-    Logger log = LogUtils.getExceptionLogger();
-    Logger log1 = LogUtils.getBussinessLogger();
-    Logger log2 = LogUtils.getDBLogger();
+    public SysUserController(SysUserService userService) {
+        this.userService = userService;
+    }
 
     @RequestMapping(value = "/add")
     public int addUser(SysUser user){
@@ -43,9 +38,8 @@ public class SysUserController {
 
     @RequestMapping(value = "/findAll/{pageNum}/{pageSize}")
     public List<SysUser> findAll(@PathVariable("pageNum") int pageNum, @PathVariable("pageSize") int pageSize){
-        List<SysUser> userList = new ArrayList<SysUser>();
-        userList = userService.findAllUser(pageNum,pageSize);
-        return userList;
+        List<SysUser> sysUsers = userService.findAllUser(pageNum,pageSize);
+        return sysUsers;
 
     }
 

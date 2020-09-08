@@ -1,7 +1,10 @@
 package com.cbayel.springboot.pojo;
 
+import lombok.Data;
+
 import java.math.BigDecimal;
 
+@Data
 public class SysProduct {
     private String productId;
 
@@ -11,35 +14,4 @@ public class SysProduct {
 
     private Integer productNum;
 
-    public String getProductId() {
-        return productId;
-    }
-
-    public void setProductId(String productId) {
-        this.productId = productId == null ? null : productId.trim();
-    }
-
-    public String getProductName() {
-        return productName;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName == null ? null : productName.trim();
-    }
-
-    public BigDecimal getProductPrice() {
-        return productPrice;
-    }
-
-    public void setProductPrice(BigDecimal productPrice) {
-        this.productPrice = productPrice;
-    }
-
-    public Integer getProductNum() {
-        return productNum;
-    }
-
-    public void setProductNum(Integer productNum) {
-        this.productNum = productNum;
-    }
 }

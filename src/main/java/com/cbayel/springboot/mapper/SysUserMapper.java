@@ -1,9 +1,11 @@
 package com.cbayel.springboot.mapper;
 
 import com.cbayel.springboot.pojo.SysUser;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface SysUserMapper {
     int deleteByPrimaryKey(Integer userId);
 
